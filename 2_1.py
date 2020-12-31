@@ -10,10 +10,7 @@ def go():
     bounds, char, password = line.split()
     bounds = [int(x) for x in bounds.split('-')]
     required_char = char[0]
-    count = 0
-    for ch in password:
-      if ch == required_char:
-        count += 1
+    count = password.count(required_char)
     if count >= bounds[0] and count <= bounds[1]:
       print('valid')
       valid_count += 1

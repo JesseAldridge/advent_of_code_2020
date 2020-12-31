@@ -1,7 +1,7 @@
 import os
 
 def go():
-  with open(os.path.expanduser('~/Desktop/1.txt')) as f:
+  with open('1.txt') as f:
     text = f.read()
 
   nums = [int(line) for line in text.splitlines()]
