@@ -1,5 +1,5 @@
 
-def count_trees(mat, r_delta, c_delta):
+def count_trees(mat, c_delta, r_delta):
   tree_count = 0
   c = 0
   for r in range(0, len(mat), r_delta):
@@ -19,5 +19,5 @@ for slope in [
   (7,1),
   (1,2),
 ]:
-  product *= count_trees(mat, slope[1], slope[0])
+  product *= count_trees(mat, slope[0], slope[1])
 print('product:', product)
